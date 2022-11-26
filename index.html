@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Inria+Serif:wght@300;400;700&family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./tailwind.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              frankRuhlLibre: ["Frank Ruhl Libre", "serif"],
+              inriaSerif: ["Inria Serif", "serif"],
+              montserrat: ["Montserrat", "sans-serif"],
+              metropolis: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-metropolis">
+    <header
+      class="flex p-3 px-[10%] items-center z-10 relative shadow justify-between"
+    >
+      <div class="bg-transparent text-[#7655DA] font-frankRuhlLibre text-5xl">
+        lina.
+      </div>
+      <ul class="md:flex gap-8 hidden">
+        <li>About Us</li>
+        <li>Process</li>
+        <li>Downloads</li>
+        <li>Contact Us</li>
+      </ul>
+      <label
+        class="p-2 border cursor-pointer flex items-center justify-center block lg:hidden rounded"
+      >
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          color="#000"
+          class="pointer-events-none"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+        <input class="peer hidden" type="checkbox" name="" id="" />
+        <nav
+          class="absolute bg-white text-blue-500 right-12 top-14 shadow p-4 rounded opacity-0 pointer-events-none transition-all peer-checked:pointer-events-auto peer-checked:opacity-100"
+        >
+          <ul class="flex flex-col gap-2">
+            <li class="mr-4 w-full">
+              <a href="/" class="p-3 block text-center hover:underline">
+                About Us
+              </a>
+            </li>
+            <li class="mr-4 w-full">
+              <a
+                href="/cbn-rates"
+                class="p-3 w-full block text-center hover:underline"
+              >
+                Process
+              </a>
+            </li>
+            <li class="mr-4 w-full">
+              <a
+                href="/atm-rates"
+                class="p-3 w-full block text-center hover:underline"
+              >
+                Downloads
+              </a>
+            </li>
+            <li class="mr-4 w-full">
+              <a
+                href="/atm-rates"
+                class="p-3 w-full block text-center hover:underline"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </label>
+    </header>
+    <section
+      class="md:px-[5%] py-12 hero flex flex-col-reverse text-center md:flex-row items-center min-h-[80vh] bg-[url('./assets/background.svg')]"
+    >
+      <div
+        class="hero_text p-8 text-center md:text-left flex flex-col gap-8 flex-1"
+      >
+        <h1 class="text-4xl font-inriaSerif font-bold lg:text-5xl xl:text-6xl">
+          Guiding you through life’s financial journey
+        </h1>
+        <p class="text-[#909090]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et magna aliqua.
+        </p>
+        <div class="flex gap-4 items-center justify-center md:justify-start">
+          <a
+            href=""
+            class="p-3 uppercase text-sm border px-6 rounded-full bg-gradient-to-b from-[#3200C8] to-[#7655DA] text-white border-none font-semibold"
+            >Get Started</a
+          >
+          <a
+            href=""
+            class="rounded-full border-[#7655DA] p-1 w-12 h-12 flex items-center justify-center border"
+          >
+            <img src="./assets/PlayButton.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="hero_image p-12 px-20 flex-1 self-stretch">
+        <img src="./assets/hero_image.svg" alt="" />
+      </div>
+    </section>
+    <section class="py-24 md:px-28 text-center">
+      <h2 class="text-5xl font-bold font-inriaSerif">About Us</h2>
+      <p class="px-8 lg:w-3/4 m-auto text-[#909090] text-sm md:text-base mt-8">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+        voluptatem.
+      </p>
+    </section>
+    <section class="py-28 px-2 md:px-12 lg:px-[5%]">
+      <h2
+        class="text-center text-3xl bg-clip-text text-transparent bg-gradient-to-r from-[#7655DA] to-[#f2c144]"
+      >
+        So why choose us?
+      </h2>
+      <div
+        class="flex flex-col md:grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12 px-12 mt-12"
+      >
+        <div class="card shadow rounded overflow-hidden">
+          <div class="p-4">
+            <img class="w-12 mb-4 h-12" src="./assets/Processing.svg" alt="" />
+            <h3 class="text-3xl mb-4 font-bold">
+              Fast <br />
+              Processing
+            </h3>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et magna aliqua.
+            </p>
+          </div>
+          <div class="p-7 bg-[#7655DA]"></div>
+        </div>
+        <div class="card shadow rounded overflow-hidden">
+          <div class="p-4">
+            <img
+              class="w-12 mb-4 h-12"
+              src="./assets/Transactions.svg"
+              alt=""
+            />
+            <h3 class="text-3xl mb-4 font-bold">
+              Secure <br />
+              Transactions
+            </h3>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et magna aliqua.
+            </p>
+          </div>
+          <div class="p-7 bg-[#F2C144]"></div>
+        </div>
+        <div class="shadow rounded overflow-hidden">
+          <div class="p-4">
+            <img
+              class="w-12 mb-4 h-12"
+              src="./assets/Confidentaility.svg"
+              alt=""
+            />
+            <h3 class="text-3xl mb-4 font-bold">
+              Profile <br />
+              Confidentiality
+            </h3>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et magna aliqua.
+            </p>
+          </div>
+
+          <div class="p-7 bg-[#68B259]"></div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 md:px-28">
+      <h2 class="text-center text-4xl font-bold font-inriaSerif">
+        How it Works…
+      </h2>
+      <p class="text-center p-8 text-[#909090]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      </p>
+      <div
+        class="flex flex-col md:grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] mt-20"
+      >
+        <div class="card flex flex-col items-center text-center">
+          <h3
+            class="text-3xl rounded p-6 bg-[#3200C8] text-[#3200C8] bg-opacity-5"
+          >
+            01
+          </h3>
+          <div class="border-t mt-8 w-full flex justify-center">
+            <div class="w-2 h-2 -mt-1 bg-[#7655DA] rounded-full"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-6">Sign Up & Get Verified</h3>
+            <p class="text-sm">
+              Download the Lina App to get started. After signing up, we take a
+              few minutes to check and verify your KYC credentials, after which,
+              you are good to go!
+            </p>
+          </div>
+        </div>
+        <div class="card flex flex-col items-center text-center">
+          <h3
+            class="text-3xl rounded p-6 bg-[#3200C8] text-[#3200C8] bg-opacity-5"
+          >
+            02
+          </h3>
+          <div class="border-t mt-8 w-full flex justify-center">
+            <div class="w-2 h-2 -mt-1 bg-[#7655DA] rounded-full"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-6">Apply for Loan</h3>
+            <p class="text-sm">
+              Need some quick cash? Fill out the application form, define the
+              amount & duration, submit and wait for approval.
+            </p>
+          </div>
+        </div>
+        <div class="card flex flex-col items-center text-center">
+          <h3
+            class="text-3xl rounded p-6 bg-[#3200C8] text-[#3200C8] bg-opacity-5"
+          >
+            03
+          </h3>
+          <div class="border-t mt-8 w-full flex justify-center">
+            <div class="w-2 h-2 -mt-1 bg-[#7655DA] rounded-full"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-6">Get Approved</h3>
+            <p class="text-sm">
+              Upon successful verification, your application is approved and
+              your account is credited with the requested amount instantly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="bg-[url('./assets/greenBG.svg')] flex flex-col md:flex-row py-16 gap-16 text-white items-center px-[5%]"
+    >
+      <div class="flex-1">
+        <h2 class="text-5xl mb-8 font-inriaSerif font-bold">
+          Ready to get started?
+        </h2>
+        <p class="mb-12">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et magna aliqua tempor incididunt
+          ut labore.
+        </p>
+        <div class="mt-4 flex flex-col sm:flex-row items-start gap-6">
+          <button
+            class="bg-gray-800 flex gap-3 text-sm p-2 text-left px-8 rounded-full"
+          >
+            <img src="./assets/playStoreIcon.svg" alt="" />
+            <div class="">
+              <p><small>GET IT ON</small></p>
+              <p class="font-semibold whitespace-nowrap uppercase">
+                Google Play
+              </p>
+            </div>
+          </button>
+          <button
+            class="bg-white flex gap-3 text-gray-800 text-sm p-2 text-left px-8 rounded-full"
+          >
+            <img src="./assets/AppStoreIcon.svg" alt="" />
+            <div class="">
+              <p><small>AVAILABLE ON THE</small></p>
+              <p class="font-semibold whitespace-nowrap uppercase">APP STORE</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="flex-1">
+        <img src="./assets/woman.svg" alt="" />
+      </div>
+    </section>
+    <section
+      class="min-h-[100vh] flex py-28 px-8 md:px-28 gap-12 bg-[#303041] flex-col lg:flex-row"
+    >
+      <div class="flex-1 text-white">
+        <h2 class="text-3xl text-center md:text-left md:text-4xl mb-4">
+          Get In Touch
+        </h2>
+        <p class="mb-4 text-center md:text-left">
+          Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod
+          tempor incididunt ut labore et dolore magna.
+        </p>
+        <div
+          class="flex flex-row md:flex-col justify-between md:justify-start pt-8 gap-8"
+        >
+          <div class="flex flex-col">
+            <h4 class="text-base uppercase font-semibold mb-4">Address</h4>
+            <p>Physical location address,</p>
+            <p>Address Line 2,</p>
+            <p>Lagos, Nigeria.</p>
+          </div>
+          <div class="flex flex-col">
+            <h4 class="text-base uppercase font-semibold mb-4">
+              Contact Details
+            </h4>
+            <p>+234 801 2345 678</p>
+            <p>sample@mohdela.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1">
+        <form action="" class="border border-gray-400 text-white p-10 rounded">
+          <label class="w-full mb-4 block">
+            <input
+              type="text"
+              class="w-full p-2 bg-transparent border border-gray-100 focus:outline-solid-yellow-200 [#7655DA] rounded"
+              placeholder="Name"
+              name=""
+              id=""
+            />
+          </label>
+          <label class="w-full mb-4 block">
+            <input
+              type="email"
+              class="w-full p-2 bg-transparent border border-gray-100 focus:outline-solid-yellow-200 [#7655DA] rounded"
+              placeholder="Email"
+              name=""
+              id=""
+            />
+          </label>
+          <label class="w-full mb-4 block">
+            <input
+              type="text"
+              class="w-full p-2 bg-transparent border border-gray-100 hover:outline-solid-yellow-200 [#7655DA] rounded"
+              placeholder="Subject"
+              name=""
+              id=""
+            />
+          </label>
+          <label class="w-full mb-4 block">
+            <textarea
+              name=""
+              class="w-full p-3 rounded border bg-transparent"
+              placeholder="Message"
+              id=""
+              cols="30"
+              rows="5"
+            ></textarea>
+          </label>
+          <button
+            class="p-3 px-8 bg-white text-base font-semibold text-[#303041] rounded-full"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer
+      class="flex flex-col md:flex-row gap-4 md:px-28 px-12 py-4 items-center justify-between"
+    >
+      <p>© Lina. 2022</p>
+      <div class="">
+        <p class="flex gap-5 items-center">
+          <a href="/" class="text-gray-600 text-sm"> Privacy Policy </a>
+          <span>|</span>
+          <a href="/" class="text-gray-600 text-sm"> Terms & Conditions </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
